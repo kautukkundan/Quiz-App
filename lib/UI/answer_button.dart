@@ -17,7 +17,13 @@ class AnswerButton extends StatelessWidget {
         onTap: ()=> _onTap(),
         child: new Center(
           child: new Container(
-            child: new Text(_answer == true ? "TRUE" : "FALSE", style: new TextStyle(fontSize: 30.0, color: Colors.white),),
+            decoration: new BoxDecoration(
+              border: new Border.all(color: Colors.white, width: 5.0),
+            ),
+            padding: new EdgeInsets.all(20.0),
+            child: new Text(_answer == true ? "True" : "False", 
+            style: new TextStyle(fontSize: 40.0, color: Colors.white, fontWeight:FontWeight.bold, fontStyle: FontStyle.italic),
+            ),
           ),
         ),
       ),
